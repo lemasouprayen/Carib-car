@@ -203,15 +203,28 @@
         <p class="muted">Remplissez le formulaire ou contactez-nous directement par téléphone/ WhatsApp ou par mail a l'adresse :<strong>caribcar971@gmail.com</strong> pour une réponse rapide.</p>
 
         <!-- Formulaire simple — configurez l'attribut action pour pointer vers votre back-end ou service e-mail -->
-        <form id="bookingForm" style="margin-top:12px" onsubmit="handleSubmit(event)">
+         <form id="bookingForm" style="margin-top:12px" onsubmit="handleSubmit(event)">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
             <input placeholder="Nom complet" name="name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
             <input placeholder="Téléphone" name="phone" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
-            <input type="date" name="from" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#fff;color:#000">
-            <input type="date" name="to" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
-          </div>
+         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+  <div style="display:flex;flex-direction:column">
+    <label for="from" style="font-size:14px;margin-bottom:4px;">Date de début de location</label>
+    <input type="date" id="from" name="from" required 
+      style="padding:10px;border-radius:8px;
+             border:1px solid rgba(255,255,255,0.2);
+             background-color:#fff;color:#000;">
+  </div>
+
+  <div style="display:flex;flex-direction:column">
+    <label for="to" style="font-size:14px;margin-bottom:4px;">Date de fin de location</label>
+    <input type="date" id="to" name="to" required 
+      style="padding:10px;border-radius:8px;
+             border:1px solid rgba(255,255,255,0.2);
+             background-color:#fff;color:#000;">
+  </div>
+</div>
           <select id="vehicleSelect" name="vehicle" required 
   style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);
          background:#ffffff;color:#004d40;width:100%;">
